@@ -1,0 +1,7 @@
+{
+    "breadcrumbs.enabled": true,
+    "emmet.includeLanguages": {
+    "cfml": "html"
+  },
+  "editor.detectIndentation": false
+}
