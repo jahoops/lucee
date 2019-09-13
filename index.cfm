@@ -1,5 +1,5 @@
-<cfquery name="qry" datasource="steppin">
-	SELECT Humid,MRaw,Temp,Moist,DATE_FORMAT(DateInserted, "%m-%d-%y %H:%i") AS Date FROM `Sensors` WHERE 1
+<cfquery name="qry" datasource="mydb">
+	SELECT * FROM `greeting`
 </cfquery>
 
 <cfscript>
@@ -23,6 +23,9 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/lib/jstree/dist/themes/default/style.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.7/fonts/forkawesome-webfont.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.7/css/fork-awesome.css" />
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
 </head>
 
@@ -69,7 +72,7 @@
                             }
                             writeOutput('</tbody></table>');
                         </cfscript>
-
+                        <div class="col-12" id="tree"></div>
                     </div>
 
 
@@ -172,9 +175,9 @@
     </div> <!-- End of .main-wrapper -->
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="/assets/lib/smoothscroll/SmoothScroll.js"></script>
+    <script src="assets/lib/smoothscroll/SmoothScroll.js"></script>
     <script>
         var cf = {};
         <cfscript>
@@ -183,6 +186,7 @@
         </cfscript>
     </script>
     <script src="index.js"></script>
+    <script src="assets/lib/jstree/dist/jstree.js"></script>
 </body>
 
 </html>
