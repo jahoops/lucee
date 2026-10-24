@@ -1,0 +1,14 @@
+[{
+    "id": 1,
+    "type":"root",
+    "text": "Root node",
+    "children": [{
+        "id": 2,
+        "type":"file",
+        "text": "Child node 1"
+    }, {
+        "id": 3,
+        "type":"file",
+        "text": "Child node 2"
+    }]
+}]
